@@ -1,8 +1,7 @@
-import React from "react"
 import {useFormik} from "formik"
 import * as Yup from "yup"
 import "animate.css"
-import "../css/Form.css"
+import styles from "@/styles/Form.module.css"
 import Link from "next/link"
 
 
@@ -33,15 +32,15 @@ function Form(){
     })
     
     return (
-        <section id="form" className="section__form">
-            <h2 className="section__form--title animate__animated animate__zoomIn">Get your detailed quote.</h2>
-            <form onSubmit={formik.handleSubmit} className="form shadow">
-                <h3 className="form--action">Solve road issues today</h3>
-                <p className="form__info">With your permission, we will contact you to provide assessment.</p>
-                <p className="form__info"> Please provide your name and email.</p>
-                <div className="input-container">
+        <section id="form" className={styles.sectionForm}>
+            <h2 className={`${styles.sectionFormTitle} animate__animated animate__zoomIn`}>Get your detailed quote.</h2>
+            <form onSubmit={formik.handleSubmit} className={`${styles.form} shadow`}>
+                <h3 className={styles.formAction}>Solve road issues today</h3>
+                <p className={styles.formInfo}>With your permission, we will contact you to provide assessment.</p>
+                <p className={styles.formInfo}> Please provide your name and email.</p>
+                <div className={styles.inputContainer}>
                     <input 
-                    className="form__input"
+                    className={styles.formInput}
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange}  
                     value={formik.values.firstname} 
@@ -52,15 +51,15 @@ function Form(){
                     placeholder="First Name"
                     />
                     {formik.touched.firstname&&formik.errors.firstname? 
-                        <p className="error-message">{formik.errors.firstname}</p>
+                        <p className={styles.errorMessage}>{formik.errors.firstname}</p>
                         : 
                         null
                     }
                 </div>
 
-                <div className="input-container">
+                <div className={styles.inputContainer}>
                     <input 
-                    className="form__input" 
+                    className={styles.formInput} 
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange} 
                     value={formik.values.lastname} 
@@ -71,15 +70,15 @@ function Form(){
                     placeholder="Last Name"
                     />
                     {formik.touched.lastname&&formik.errors.lastname? 
-                        <p className="error-message">{formik.errors.lastname}</p>
+                        <p className={styles.errorMessage}>{formik.errors.lastname}</p>
                         : 
                         null
                     }
                 </div>
 
-                <div className="input-container">
+                <div className={styles.inputContainer}>
                     <input 
-                    className="form__input" 
+                    className={styles.formInput} 
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange} 
                     value={formik.values.email} 
@@ -90,27 +89,27 @@ function Form(){
                     placeholder="email"
                     />
                     {formik.touched.email&&formik.errors.email? 
-                        <p className="error-message">{formik.errors.email}</p>
+                        <p className={styles.errorMessage}>{formik.errors.email}</p>
                         : 
                         null
                     }
                 </div>
 
-                <div className="input-container">
-                    <div className="privacy-policy-container">
+                <div className={styles.inputContainer}>
+                    <div className={styles.privacyPolicyContainer}>
                         <input 
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange} 
                             checked={formik.values.policyChecked} 
                             type="checkbox" 
                             name="policyChecked" 
-                            className="privacy-policy-checkbox" 
+                            className={styles.privacyPolicyCheckbox} 
                             aria-label="privacy policy checkbox"
                             />
-                        <p className="privacy-policy-statement">I have read and understand the <Link href="privacy">privacy policy</Link></p>
+                        <p className={styles.privacyPolicyStatement}>I have read and understand the <Link href="privacy">privacy policy</Link></p>
                     </div>
                         {formik.touched.policyChecked&&formik.errors.policyChecked? 
-                            <p className="error-message">{formik.errors.policyChecked}</p>
+                            <p className={styles.errorMessage}>{formik.errors.policyChecked}</p>
                             : 
                             null
                         }
@@ -118,11 +117,11 @@ function Form(){
 
                 <button 
                     type="submit" 
-                    className="form__btn--submit" 
+                    className={styles.formBtnSubmit}
                     aria-label="submit button">
                         Get a quote
                 </button>
-                <p className="privacy-policy-statement">We respect your right to privacy.</p>
+                <p className={styles.privacyPolicyStatement}>We respect your right to privacy.</p>
             </form>
         </section>
     )
