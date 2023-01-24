@@ -1,7 +1,6 @@
-import React from "react";
 import Link from "next/link";
 import "animate.css";
-import checkMark from "../images/check-mark.png";
+import checkMark from "../public/check-mark.png";
 import Image from "next/image";
 
 function Hero() {
