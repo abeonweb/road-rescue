@@ -17,13 +17,14 @@ export default function Benefit({
   type,
   elevation,
 }: Props) {
+
   return (
     <Grid item xs={4} md={4}>
       <Paper className={type} elevation={elevation}>
         <CardMedia
           component="img"
           height="190"
-          image={require("../images/" + image + ".webp")}
+          image={`../${image}.webp`}
           alt=" benefit"
           className="benefit__image"
         />
