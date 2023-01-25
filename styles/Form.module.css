@@ -1,0 +1,141 @@
+.sectionForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding: 4em 0;
+    margin-top: 4em;
+    border-bottom: 2px solid rgba(7, 113, 92, 0.1);
+    background: rgb(173,245,246);
+    background: linear-gradient(346deg, rgba(173,245,246,1) 0%, rgba(251,251,251,1) 47%, rgba(164,250,181,1) 100%);
+}
+
+.form {
+    background-color: #BBFFCA;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    max-width: 500px;
+    padding: 1.5em;
+    border-radius: 0.4em;
+    letter-spacing: 1px;
+}
+
+.sectionFormTitle{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+    padding: 0 1em;
+    line-height: 1.4;
+}
+
+.formAction{
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.formInfo {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.privacyPolicyContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.inputContainer {
+    margin-bottom: 1.5em;
+}
+
+.inputContainer:first-of-type {
+    margin-top: 1.5em;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    line-height: 1.5;
+    border: none;
+    border-radius: 0.3em;
+    outline: none;
+}
+
+.formInput::placeholder {
+    color: rgba(7, 113, 92,0.8);
+    
+}
+
+.formInput:focus {
+    outline: 2px solid #07715C;
+}
+
+.formBtnSubmit {
+    padding: 0.8em 1.6em;
+    align-self: center;
+    border: none;
+    border-radius: 0.3em;
+    background-color: #8f1818;
+    color: #FFFFFF;
+    margin-bottom: 0.8em;
+    outline: none;
+}
+
+.formBtnSubmit:hover,
+.formBtnSubmit:focus {
+    background-color: #d52e2e;
+}
+
+.privacyPolicyCheckbox {
+    margin-right: 0.5em;
+    outline: none;
+}
+
+.privacyPolicyStatement {
+    font-size: 0.8em;
+    text-align: center;
+
+}
+
+.errorMessage {
+    color: #c10000;
+    font-size: 0.7em;
+    margin: 0.2em 0;
+    display: block;
+}
+
+
+@media (min-width: 690px){
+    
+    .sectionForm{
+        padding: 3em;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .sectionFormTitle{
+        width: 40%;
+        font-size: 2.5em;
+        line-height: 1.6;
+        padding: 0 2em 0 0;
+        margin-bottom: 0;
+    }
+    
+    .form{
+        width: 55%;
+        align-self: center;
+    }
+
+    .formInfo {
+        font-size: 0.8em;
+    }
+
+    .privacyPolicyStatement {
+        font-size: 0.6em;
+        text-align: center;
+    
+    }
+}
