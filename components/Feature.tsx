@@ -1,5 +1,6 @@
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import Image from "next/image";
 
 type Props = {
   image: string;
@@ -28,10 +29,12 @@ export default function Feature({
         elevation={elevation}
       >
         <span className="feature-image-container shadow">
-          <img
+          <Image
             className="feature-image"
-            src={require("../images/" + image + ".png")}
+            src={`/${image}.png`}
             alt={image + " icon"}
+            width={35}
+            height={35}
           />
         </span>
         <div className="feature-info">
