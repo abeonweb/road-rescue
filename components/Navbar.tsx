@@ -6,7 +6,7 @@ import { links } from "../data";
 import Link from "next/link";
 import Image from "next/image";
 
-function Navbar() {
+export default function Navbar() {
   const { openMenu, handleClick } = useToggle();
 
   useEffect(() => {
@@ -20,10 +20,15 @@ function Navbar() {
   function scrolled() {
     const navbar = document.querySelector(".navbar");
     const sharedLayout = document.querySelector("#shared-layout");
-    if(navbar === null || sharedLayout === null) return
-    if (window.pageYOffset > navbar.clientHeight)
-      sharedLayout.classList.add("sticky");
-    else sharedLayout.classList.remove("sticky");
+    if (navbar !== null && sharedLayout !== null){
+        if (window.scrollY > navbar.clientHeight) {
+            console.log("adding to navbar class");
+            sharedLayout.classList.add(`sticky`);
+        } else {
+            sharedLayout.classList.remove(`sticky`);
+            console.log("nothing");
+        }
+    } 
   }
 
   const linksList = links.map((data, index) => {
@@ -32,7 +37,7 @@ function Navbar() {
         <li key={index + 1}>
           <Link
             href={data.link}
-            className={"navLink"}
+            className={styles.navLink}
             onClick={handleClick}
           >
             {data.name}
@@ -42,30 +47,27 @@ function Navbar() {
     }
     return (
       <li key={index + 1}>
-        <Link
-          href={data.link}
-          className={"navLink"}
-          onClick={handleClick}
-        >
+        <Link href={data.link} className={styles.navLink} onClick={handleClick}>
           {data.name}
         </Link>
       </li>
     );
   });
   return (
-    <header className={`${styles.navbar} ${openMenu ? styles.navOpen : ""}`}>
+    <header
+      className={`${styles.navbar} ${
+        openMenu ? styles.navOpen + " active" : ""
+      }`}
+    >
       <div className={styles.heroContentWrapper}>
         <div className={styles.navLogo}>
-          <Link
-            href="/"
-            className={"navLink"}
-          >
+          <Link href="/" className={"navLink"}>
             <Image
               src={logo}
               className={styles.logoNav}
               alt=""
               width={50}
-              height={50}
+              height={40}
             />
           </Link>
         </div>
@@ -75,14 +77,12 @@ function Navbar() {
           aria-label="toggle navigation menu"
           type="submit"
         >
-          <span className="hamburger"></span>
+          <span className={styles.hamburger}></span>
         </button>
-        <nav className="nav">
-          <ul className="nav-list">{linksList}</ul>
+        <nav className={styles.nav}>
+          <ul className={styles.navList}>{linksList}</ul>
         </nav>
       </div>
     </header>
   );
 }
-
-export default Navbar;

@@ -2,53 +2,53 @@ import Link from "next/link";
 import "animate.css";
 import checkMark from "../public/check-mark.png";
 import Image from "next/image";
-
+import styles from "@/styles/Home.module.css"
 function Hero() {
   return (
     <>
-      <section className="hero-container">
-        <div className="overlay"></div>
+      <section className={styles.heroContainer}>
+        <div className={styles.overlay}></div>
 
-        <div className="hero">
+        <div className={styles.hero}>
           <div>
-            <div className="logo-title-container">
-              <h1 className="hero__title">
-                <span className="hero__title--primary">Road Rescue</span>
-                <span className="hero__title--secondary">
+            <div className={styles.logoTitleContainer}>
+              <h1 className={styles.heroTitle}>
+                <span className={styles.heroTitlePrimary}>Road Rescue</span>
+                <span className={styles.heroTitleSecondary}>
                   & Maintenance company limited
                 </span>
               </h1>
             </div>
           </div>
-          <div className="catchphrase-container">
-            <h2 className="hero__phrase">
-              <span className="hero-highlight">Fix</span> road defects{" "}
-              <span className="hero-highlight">fast</span>
+          <div className={styles.catchphraseContainer}>
+            <h2 className={styles.hero__phrase}>
+              <span className={styles.heroHighlight}>Fix</span> road defects{" "}
+              <span className={styles.heroHighlight}>fast</span>
             </h2>
-            <ul className="hero__list">
-              <li className="hero__list-item">
-                <Image src={checkMark} className="hero__list-icon" alt="" />
+            <ul className={styles.heroList}>
+              <li className={styles.heroListItem}>
+                <Image src={checkMark} className={styles.heroListIcon} alt="" width={22} height={22}/>
                 #1 solution effective road repair
               </li>
-              <li className="hero__list-item">
-                <Image src={checkMark} className="hero__list-icon" alt="" />
+              <li className={styles.heroListItem}>
+                <Image src={checkMark} className={styles.heroListIcon} alt="" width={22} height={22}/>
                 Save money and time
               </li>
-              <li className="hero__list-item">
-                <Image src={checkMark} className="hero__list-icon" alt="" />
+              <li className={styles.heroListItem}>
+                <Image src={checkMark} className={styles.heroListIcon} alt="" width={22} height={22}/>
                 Use even in rainy conditions
               </li>
             </ul>
-            <div className="cta-container">
+            <div className={styles.ctaContainer}>
               <Link
                 href="/#form"
-                className="hero__cta-btn hero__cta-btn-form animate__animated animate__slideInLeft shadow"
+                className={`${styles.heroCtaBtn} ${styles.heroCtaBtnForm} animate__animated animate__slideInLeft shadow`}
               >
                 Get a quote
               </Link>
               <Link
                 href="/#contact"
-                className="hero__cta-btn hero__cta-btn-contact animate__animated animate__slideInRight shadow"
+                className={`${styles.heroCtaBtn} ${styles.heroCtaBtnContact} animate__animated animate__slideInRight shadow`}
               >
                 Call us
               </Link>
