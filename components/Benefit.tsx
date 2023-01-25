@@ -24,7 +24,7 @@ export default function Benefit({
         <CardMedia
           component="img"
           height="190"
-          image={`../${image}.webp`}
+          image={`./${image}.webp`}
           alt=" benefit"
           className="benefit__image"
         />
