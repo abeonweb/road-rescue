@@ -277,41 +277,6 @@ body {
   padding-left: 2em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =============== MEDIA QUERIES =============== */
 
 @media (min-width: 280px) {
@@ -333,32 +298,6 @@ body {
     font-size: 1.6rem;
   }
 
-  .overlay {
-    background: linear-gradient(to right,  rgba(0, 0, 0, 0.25) 36%, rgba(9, 9, 9, 0.85) 100%);
-  }
-
-  .hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .heroCtaBtnContact {
-    margin-bottom: 1.5em;
-  }
-
-  .catchphraseContainer {
-    margin: 0;
-  }
-
-  .hero__title {
-    margin: 1em 0;
-  }
-
-  .ctaContainer {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
   .section--title {
     font-size: 3rem;
   }
@@ -373,21 +312,6 @@ body {
     width: 25%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-  }
-
-  .hero__title--primary {
-    font-size: 5rem;
-    padding-bottom: 0.4em;
-  }
-
-
-  .hero__title--secondary {
-    font-size: 1.4rem;
-    padding: 0.5em;
-  }
-
-  .hero__list {
-    padding: 0.5em 1.5em;
   }
 
   .benefit {

@@ -21,21 +21,22 @@ function Hero() {
             </div>
           </div>
           <div className={styles.catchphraseContainer}>
-            <h2 className={styles.hero__phrase}>
-              <span className={styles.heroHighlight}>Fix</span> road defects{" "}
+            <h2 className={styles.heroPhrase}>
+              <span className={styles.heroHighlight}>Fix </span> 
+              road defects{" "}
               <span className={styles.heroHighlight}>fast</span>
             </h2>
             <ul className={styles.heroList}>
               <li className={styles.heroListItem}>
-                <Image src={checkMark} className={styles.heroListIcon} alt="" width={22} height={22}/>
+                <Image src={checkMark} className={styles.heroListIcon} alt="" width={24} height={22}/>
                 #1 solution effective road repair
               </li>
               <li className={styles.heroListItem}>
-                <Image src={checkMark} className={styles.heroListIcon} alt="" width={22} height={22}/>
+                <Image src={checkMark} className={styles.heroListIcon} alt="" width={24} height={22}/>
                 Save money and time
               </li>
               <li className={styles.heroListItem}>
-                <Image src={checkMark} className={styles.heroListIcon} alt="" width={22} height={22}/>
+                <Image src={checkMark} className={styles.heroListIcon} alt="" width={24} height={22}/>
                 Use even in rainy conditions
               </li>
             </ul>

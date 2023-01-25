@@ -169,8 +169,6 @@
   color: var(--clr-hl-5);
 }
 
-
-
 .carousel {
   width: 400%;
   position: absolute;
@@ -250,3 +248,49 @@
 } */
 
 
+/* =============== MEDIA QUERIES =============== */
+
+@media (min-width: 890px) {
+
+  .overlay {
+    background: linear-gradient(to right,  rgba(0, 0, 0, 0.25) 36%, rgba(9, 9, 9, 0.85) 100%);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroCtaBtnContact {
+    margin-bottom: 1.5em;
+  }
+
+  .catchphraseContainer {
+    margin: 0;
+  }
+
+  .heroTitle {
+    margin: 1em 0;
+  }
+
+  .ctaContainer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .heroTitlePrimary {
+    font-size: 5rem;
+    padding-bottom: 0.4em;
+  }
+
+
+  .heroTitleSecondary {
+    font-size: 1.4rem;
+    padding: 0.5em;
+  }
+
+  .heroList {
+    padding: 0.5em 1.5em;
+  }
+
+}
