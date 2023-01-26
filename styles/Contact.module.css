@@ -1,0 +1,88 @@
+/* =============== CONTACTS =============== */
+.sectionContact {
+    min-height: 60vh;
+    /* background-color: var(--clr-hl-4); */
+    background: rgb(3, 97, 116);
+    background: radial-gradient(circle, rgba(184, 253, 191, 0.3) 0%, rgb(8, 77, 69) 0%, rgb(3, 97, 116) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactContainer {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--clr-hl);
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto 1em;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+}
+
+.contactInfoTitle {
+    margin-bottom: 0.5em;
+    align-self: flex-start;
+}
+
+.contact-subtitle {
+    margin-bottom: 1em;
+}
+
+.officeHours,
+.contactInfoList {
+    margin: 1em 0 1.5em 1.5em;
+}
+
+.contactInfoList {
+    list-style: none;
+    padding: 0;
+}
+
+.contactInfoList li {
+    display: flex;
+    align-items: center;
+}
+
+
+.contactInfoList>li {
+    line-height: 1.4;
+    padding: 0 0 1.5em;
+}
+
+.contactInfoList>li:first-of-type {
+    padding-top: 1.5em;
+}
+
+.contactIcon {
+    padding-right: 0.5em;
+    margin-right: 1.5em;
+}
+
+
+@media (min-width: 690px) {
+    .sectionContact {
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    .contactContainer{
+        width: 100%;
+        display: block;
+    }
+    
+    .contactInfo {
+        margin: 2em auto;
+    }
+}
