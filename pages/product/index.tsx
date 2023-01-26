@@ -8,7 +8,7 @@ export default function Product() {
     <main className={styles.productMain}>
       <h1 className={"page--title"}>Cold Mix Asphalt</h1>
       <section className={`section ${styles.sectionProduct}`}>
-        <h2 className={"section--title"}>
+        <h2 className={`section--title`}>
           What makes our asphalt the best choice.
         </h2>
         <section className={styles.sectionProductFeatures}>
@@ -23,8 +23,8 @@ export default function Product() {
                   className={styles.productImage}
                   src={`/${image}.webp`}
                   alt=""
-                  width={100}
-                  height={100}
+                  width={400}
+                  height={300}
                 />
                 <div className={styles.productInfo}>
                   <h5 className={styles.productHeading}>{heading}</h5>
