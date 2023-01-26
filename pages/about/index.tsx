@@ -1,5 +1,5 @@
 import { about, teamData, vision } from "../../data"
-import "@/styles/About.module.css"
+import styles from "@/styles/About.module.css"
 import Profile from "../../components/Profile"
 import VisionCard from "../../components/VisionCard"
 import Objective from "../../components/Objective"
@@ -25,21 +25,21 @@ export default function About() {
     })
 
     return (
-        <main className="main">
-            <h1 className="page--title about-title">Who we are</h1>
-            <section className="section section__vision">
-                <h2 className="section--title"> Our Vision</h2>
-                <div className="vision-list">
+        <main className={"main"}>
+            <h1 className={`page--title ${styles.aboutTitle}`}>Who we are</h1>
+            <section className={`section ${styles.sectionVision}`}>
+                <h2 className={`section--title`}> Our Vision</h2>
+                <div className={styles.visionList}>
                     {visionList}
                 </div>
             </section>
-            <section className="section section__about">
-                <h2 className="section--title">Our Objective</h2>
+            <section className={`section ${styles.sectionAbout}`}>
+                <h2 className={`section--title`}>Our Objective</h2>
                 {aboutSection}
             </section>
-            <section className="section section__management">
-                <h2 className="section--title management-section-title">Our Management Team</h2>
-                <div className="profile-container">
+            <section className={`section ${styles.sectionManagement}`}>
+                <h2 className={`section--title ${styles.managementSectionTitle}`}>Our Management Team</h2>
+                <div className={styles.profileContainer}>
                     {managementTeam}
                 </div>
             </section>
