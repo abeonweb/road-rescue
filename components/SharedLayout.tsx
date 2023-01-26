@@ -9,10 +9,10 @@ type Props = {
 export default function SharedLayout({children}: Props){
     
     return (
-        <div id="shared-layout">
+        <>
             <Navbar />
             <main>{children}</main>
             <Footer />
-        </div>
+        </>
     )
 }
