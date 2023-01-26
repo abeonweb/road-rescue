@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "@/styles/Product.module.css";
 import { productFeatures } from "../../data";
-import Image from "next/image";
 
 export default function Product() {
   return (
