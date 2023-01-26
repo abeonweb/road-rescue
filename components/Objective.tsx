@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { string } from "yup";
+import styles from "@/styles/About.module.css";
 
 type ObjectiveProps = {
   image: string;
@@ -11,19 +11,19 @@ type ObjectiveProps = {
 };
 const Objective = ({ image, alt, title, body, id }: ObjectiveProps) => {
   return (
-    <article className="objective">
-      <div className="objective-container">
+    <article className={styles.objective}>
+      <div className={styles.objectiveContainer}>
         <Image
           src={`/${image}.webp`}
           alt={alt}
-          className="about-image"
-          width={700}
-          height={500}
+          className={styles.aboutImage}
+          width={300}
+          height={300}
         />
         <div>
-          <h3 className="about-body-title">{title}</h3>
-          <p className="about-body cutoff-text">{body}</p>
-          <input type="checkbox" className="expand-btn" />
+          <h3 className={styles.aboutBodyTitle}>{title}</h3>
+          <p className={`${styles.aboutBody} ${styles.cutoffText}`}>{body}</p>
+          <input type="checkbox" className={styles.expandBtn} placeholder={""}/>
         </div>
       </div>
     </article>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import styles from "@/styles/About.module.css"
 
 type VisionProps = {
   image: string;
@@ -10,17 +11,18 @@ type VisionProps = {
 
 const VisionCard = ({ title, image, alt, text }: VisionProps) => {
   return (
-    <div className="vision-card">
+    <div className={styles.visionCard}>
       <Image
         src={`/${image}.webp`}
         alt={alt}
-        className="vision-image"
-        width={400}
-        height={300}
+        className={styles.visionImage}
+        width={150}
+        height={150}
+        priority
       />
-      {/* <div className="vision-body"> */}
-      <h3 className="vision-title">{title}</h3>
-      <p className="vision-text-body">{text}</p>
+      {/* <div className={styles.visionBody}> */}
+      <h3 className={styles.visionTitle}>{title}</h3>
+      <p className={styles.visionTextBody}>{text}</p>
       {/* </div> */}
     </div>
   );
