@@ -231,4 +231,34 @@ const testimonials = [
 
 ]
 
-export { benefits, features, productFeatures, services, teamData, links, about, vision, testimonials }
+const contactData = [
+    {
+        id: 1,
+        address: "Gloryland Plaza Apata Ibadan, Oyo",
+    },
+    {
+        id: 2,
+        address: "45/47 Karimu Street Surulere, Lagos",
+    },
+    {
+        id: 3,
+        address: "773 AMAC Housing Estate Airport Rd, Abuja",
+    },
+]
+
+const telephone = [
+    {
+        id: 1,
+        phoneNumber: "+234 803 323 7141",
+    },
+    {
+        id: 2,
+        phoneNumber: "+234 803 301 7071",
+    },
+    {
+        id: 3,
+        phoneNumber: "+234 913 660 6955",
+    },
+]
+
+export { benefits, features, productFeatures, services, teamData, links, about, vision, testimonials, contactData, telephone }
