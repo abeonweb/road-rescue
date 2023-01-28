@@ -239,12 +239,12 @@
   }
   
   .footerNavLink:hover,
-  .footer-navLink:focus {
+  .footerNavLink:focus {
     color: var(--clr-hl);
   }
   
   .footerSocialIcon {
-    /* transform: scale(1); */
+    transform: scale(1);
   }
   
   
