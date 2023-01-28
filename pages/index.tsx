@@ -5,6 +5,7 @@ import Form from "../components/Form";
 import Contact from "../components/Contact";
 import Hero from "../components/Hero";
 import Faq from "../components/Faq";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         <Form />
         <Features />
         <Faq />
-        <Contact />
+        <Banner />
       </main>
     </>
   );

@@ -3,6 +3,7 @@ import styles from "@/styles/About.module.css"
 import Profile from "../../components/Profile"
 import VisionCard from "../../components/VisionCard"
 import Objective from "../../components/Objective"
+import Banner from "@/components/Banner"
 
 export default function About() {
 
@@ -43,6 +44,7 @@ export default function About() {
                     {managementTeam}
                 </div>
             </section>
+            <Banner />
         </main >
     )
 }

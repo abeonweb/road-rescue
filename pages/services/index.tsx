@@ -1,13 +1,13 @@
 import styles from "@/styles/Product.module.css";
 import { services } from "../../data";
 import Image from "next/image";
+import Banner from "@/components/Banner";
 
 export default function Services() {
   return (
     <main className="main">
       <h1 className="page--title">What we do</h1>
-      <section className={styles.sectionServices}>
-        <div>
+      <section className={styles.sectionServicesText}>
           {/* <h2 className="section--title">Scope of Services</h2> */}
           <div>
             <p className={styles.scopeBody}>
@@ -19,8 +19,8 @@ export default function Services() {
             </p>
             <p className={styles.scopeBody}>Join us and let's make a safer, better Nigeria.</p>
           </div>
-        </div>
       </section>
+        <Banner />
       <section className={styles.sectionService}>
         {services.map((service) => {
           const { id, image, heading, body } = service;
@@ -47,6 +47,7 @@ export default function Services() {
           );
         })}
       </section>
+
     </main>
   );
 }
