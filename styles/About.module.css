@@ -123,9 +123,9 @@
 .visionList {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 4em;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 
 }
@@ -135,6 +135,7 @@
     max-width: 450px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 .visionCardImageContainer {
@@ -302,7 +303,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
     .objective {
         flex-direction: row;
         justify-content: flex-start;
