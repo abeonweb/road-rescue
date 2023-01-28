@@ -9,7 +9,7 @@ function Form(){
     const formik = useFormik({
         initialValues: {
             firstname: "",
-            lastname: "",
+            // lastname: "",
             email: "",
             policyChecked: false
         },
@@ -21,9 +21,9 @@ function Form(){
             firstname: Yup.string()
                          .max(20, "Maximum 20 characters")
                         .required("Required"),
-            lastname: Yup.string()
-                         .max(20, "Maximum 20 characters")
-                        .required("Required"),
+            // lastname: Yup.string()
+            //              .max(20, "Maximum 20 characters")
+            //             .required("Required"),
             email: Yup.string()
                         .email("Not a valid email")
                         .required("Required"),
@@ -48,16 +48,16 @@ function Form(){
                     name="firstname" 
                     id="" 
                     aria-label="firstname"
-                    placeholder="First Name"
+                    placeholder="Name"
                     />
                     {formik.touched.firstname&&formik.errors.firstname? 
                         <p className={styles.errorMessage}>{formik.errors.firstname}</p>
                         : 
-                        null
+                        <p className={styles.errorMessage}>{" "}</p>
                     }
                 </div>
 
-                <div className={styles.inputContainer}>
+                {/* <div className={styles.inputContainer}>
                     <input 
                     className={styles.formInput} 
                     onBlur={formik.handleBlur}
@@ -72,9 +72,9 @@ function Form(){
                     {formik.touched.lastname&&formik.errors.lastname? 
                         <p className={styles.errorMessage}>{formik.errors.lastname}</p>
                         : 
-                        null
+                        <p> </p>
                     }
-                </div>
+                </div> */}
 
                 <div className={styles.inputContainer}>
                     <input 
@@ -85,13 +85,13 @@ function Form(){
                     type="email" 
                     name="email" 
                     id="" 
-                    aria-label="email"
-                    placeholder="email"
+                    aria-label="Email"
+                    placeholder="Email"
                     />
                     {formik.touched.email&&formik.errors.email? 
                         <p className={styles.errorMessage}>{formik.errors.email}</p>
                         : 
-                        null
+                        <p> </p>
                     }
                 </div>
 
@@ -111,7 +111,7 @@ function Form(){
                         {formik.touched.policyChecked&&formik.errors.policyChecked? 
                             <p className={styles.errorMessage}>{formik.errors.policyChecked}</p>
                             : 
-                            null
+                            <p> </p>
                         }
                 </div>
 
