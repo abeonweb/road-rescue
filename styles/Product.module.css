@@ -7,30 +7,33 @@
     padding: 4em 0 0;
 }
 
-.sectionServices { /**/
+.sectionProductFeatures,
+.sectionService {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.sectionServicesText {
+    padding-bottom: 4em;
+}
+
+.sectionServices {
+    /**/
     padding-top: 85px;
 }
 
 
 .sectionProductFeatures {
     padding: 2em 0 0;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
 }
 
 
 .left,
 .right {
     text-align: center;
-}
-
-.left {
     flex-direction: column;
 }
-
-.right {
-    flex-direction: column;
-}
-
 
 .productHeading {
     text-transform: capitalize;
@@ -57,6 +60,7 @@
     align-items: center;
     background-color: rgb(255, 255, 255);
 }
+
 /* ============ SERVICES ============ */
 .sectionService {
     margin-top: 3em;
