@@ -321,6 +321,11 @@ body {
   
 }
 
+.banner-image-text-secondary {
+  padding-top: 0.5em;
+  letter-spacing: 0.2em;
+}
+
 .banner-btn {
   padding: 1em 1.5em;
   margin-top: 2em;
@@ -348,13 +353,17 @@ body {
   }
 
   .banner-image-text {
-      font-size: 3.6em;
+    font-size: 3em;
+    
+  }
+  
+  .banner-image-text-primary {
+    font-size: 3.2em;
 
   }
 
-  .banner-image-text-primary {
-      font-size: 3em;
-
+  .banner-image-text-secondary {
+    padding-bottom: 0.5em;
   }
 
 }
