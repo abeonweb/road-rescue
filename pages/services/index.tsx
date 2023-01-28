@@ -17,7 +17,7 @@ export default function Services() {
               about positive change for citizens, communities, and eventually
               the economy.
             </p>
-            <p className={styles.scopeBody}>Join us and let's make a safer, better Nigeria.</p>
+            <p className={styles.scopeBody}>Join us and let&apos;s make a safer, better Nigeria.</p>
           </div>
       </section>
         <Banner />
