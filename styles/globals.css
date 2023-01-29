@@ -33,6 +33,8 @@ body {
   width: 100%;
   color: var(--clr-dark);
   position: relative;
+  background: rgb(232, 252, 238);
+  background: linear-gradient(152deg, rgba(232, 252, 238, 1) 0%, rgba(242, 242, 251, 1) 46%, rgba(232, 252, 238, 1) 100%);
 }
 
 /* ============= TYPOGRAPHY ============ */
@@ -76,10 +78,7 @@ body {
 }
 
 /* ============ LAYOUT ================ */
-.main {
-  background: rgb(232, 252, 238);
-  background: linear-gradient(152deg, rgba(232, 252, 238, 1) 0%, rgba(242, 242, 251, 1) 46%, rgba(232, 252, 238, 1) 100%);
-}
+
 
 /* ======== Utility ============ */
 
