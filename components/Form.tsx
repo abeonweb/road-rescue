@@ -1,3 +1,4 @@
+import Router, {useRouter} from "next/router"
 import {useFormik} from "formik"
 import * as Yup from "yup"
 import "animate.css"
@@ -6,6 +7,7 @@ import Link from "next/link"
 
 
 function Form(){
+    const router = useRouter()
     const formik = useFormik({
         initialValues: {
             firstname: "",
@@ -14,7 +16,7 @@ function Form(){
             policyChecked: false
         },
         onSubmit: values=>{
-            alert(JSON.stringify(values, null, 2))
+            router.push('/success')
         },
 
         validationSchema: Yup.object({
